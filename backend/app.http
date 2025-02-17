@@ -1,0 +1,7 @@
+get http://localhost:3000/notes
+
+###
+POST http://localhost:3000/notes
+
+###
+GET http://localhost:3000/notes/:id
