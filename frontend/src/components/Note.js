@@ -34,7 +34,6 @@ class Note extends Component {
       });
       this.setState({ notes: response.data });
     } catch (error) {
-      console.error("Error fetching notes:", error.response?.data || error.message);
       this.setState({ error: "Error fetching notes. Please log in again." });
     }
   };
