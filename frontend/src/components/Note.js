@@ -27,7 +27,7 @@ class Note extends Component {
     }
 
     try {
-      const response = await axios.get("http://localhost:3000/notes", {
+      const response = await axios.get("https://notes-backend-8fni.onrender.com/notes", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ class Note extends Component {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/notes",
+        "https://notes-backend-8fni.onrender.com/notes",
         { ...this.state.newNote },
         {
           headers: {
@@ -66,7 +66,7 @@ class Note extends Component {
     const token = localStorage.getItem("jwtToken");
 
     try {
-      await axios.delete(`http://localhost:3000/notes/${id}`, {
+      await axios.delete(`https://notes-backend-8fni.onrender.com/notes/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -98,7 +98,7 @@ class Note extends Component {
 
     try {
       await axios.put(
-        `http://localhost:3000/notes/${this.state.editingNoteId}`,
+        `https://notes-backend-8fni.onrender.com/notes/${this.state.editingNoteId}`,
         { ...this.state.newNote },
         {
           headers: {

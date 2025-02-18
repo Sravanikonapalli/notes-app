@@ -13,7 +13,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:3000/signup", { name, email, password });
+      await axios.post("https://notes-backend-8fni.onrender.com/signup", { name, email, password });
       navigate("/login"); 
     } catch (err) {
       setError("Error signing up. Please try again.");
